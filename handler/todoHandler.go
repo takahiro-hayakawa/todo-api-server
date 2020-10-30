@@ -3,7 +3,7 @@ package handler
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/takahiro-hayakawa/todo-api/usecase"
+	"github.com/takahiro-hayakawa/todo-api-server/usecase"
 	"net/http"
 )
 

@@ -1,11 +1,11 @@
 package injector
 
 import (
-	"github.com/takahiro-hayakawa/todo-api/domain/repository"
-	"github.com/takahiro-hayakawa/todo-api/handler"
-	"github.com/takahiro-hayakawa/todo-api/infra"
-	"github.com/takahiro-hayakawa/todo-api/infra/stub"
-	"github.com/takahiro-hayakawa/todo-api/usecase"
+	"github.com/takahiro-hayakawa/todo-api-server/domain/repository"
+	"github.com/takahiro-hayakawa/todo-api-server/handler"
+	"github.com/takahiro-hayakawa/todo-api-server/infra"
+	"github.com/takahiro-hayakawa/todo-api-server/infra/stub"
+	"github.com/takahiro-hayakawa/todo-api-server/usecase"
 )
 
 func InjectDB() infra.SqlHandler {

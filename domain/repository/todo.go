@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/takahiro-hayakawa/todo-api/domain/model"
+	"github.com/takahiro-hayakawa/todo-api-server/domain/model"
 )
 
 type TodoRepository interface {

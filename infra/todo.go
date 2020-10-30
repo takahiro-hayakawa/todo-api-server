@@ -2,8 +2,8 @@ package infra
 
 import (
 	"fmt"
-	"github.com/takahiro-hayakawa/todo-api/domain/model"
-	"github.com/takahiro-hayakawa/todo-api/domain/repository"
+	"github.com/takahiro-hayakawa/todo-api-server/domain/model"
+	"github.com/takahiro-hayakawa/todo-api-server/domain/repository"
 )
 
 type TodoRepository struct {

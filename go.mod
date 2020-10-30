@@ -1,4 +1,4 @@
-module github.com/takahiro-hayakawa/todo-api
+module github.com/takahiro-hayakawa/todo-api-server
 
 go 1.14
 

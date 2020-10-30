@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/takahiro-hayakawa/todo-api/handler"
-	"github.com/takahiro-hayakawa/todo-api/injector"
+	"github.com/takahiro-hayakawa/todo-api-server/handler"
+	"github.com/takahiro-hayakawa/todo-api-server/injector"
 )
 
 func main() {
