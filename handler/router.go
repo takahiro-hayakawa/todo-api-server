@@ -6,4 +6,5 @@ import (
 
 func InitRouting(e *gin.Engine, todoHandler TodoHandler) {
 	e.GET("/", todoHandler.View())
+	e.GET("/:id", todoHandler.Find())
 }

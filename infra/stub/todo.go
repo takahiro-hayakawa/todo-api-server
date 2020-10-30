@@ -14,12 +14,18 @@ func NewTodoRepository() repository.TodoRepository {
 }
 
 func (todoRepo *TodoRepository) FindAll() (todos []*model.Todo, err error) {
+	todos = []*model.Todo{
+		&model.Todo{ID: 1, Task: "本を読む", LimitDate: 1604081293, Status: 1},
+		&model.Todo{ID: 2, Task: "料理する", LimitDate: 1604081434, Status: 0},
+	}
+	return
+}
 
-	todo1 := model.Todo{ID: 1, Task: "本を読む", LimitDate: 1604081293, Status: 1}
-	todos = append(todos, &todo1)
-
-	todo2 := model.Todo{ID: 2, Task: "料理する", LimitDate: 1604081434, Status: 0}
-	todos = append(todos, &todo2)
-
+func (todoRepo *TodoRepository) FindById(id int) (todo *model.Todo, err error) {
+	todoMap := map[int]*model.Todo{
+		1: &model.Todo{ID: 1, Task: "本を読む", LimitDate: 1604081293, Status: 1},
+		2: &model.Todo{ID: 2, Task: "料理する", LimitDate: 1604081434, Status: 0},
+	}
+	todo = todoMap[id]
 	return
 }

@@ -7,10 +7,15 @@ import (
 
 type TodoUsecase interface {
 	View() (todo []*model.Todo, err error)
+	Find(id int) (todo *model.Todo, err error)
 }
 
 type todoUsecase struct {
 	todoRepo repository.TodoRepository
+}
+
+func (usecase *todoUsecase) Id(id int) (todo *model.Todo, err error) {
+	panic("implement me")
 }
 
 func NewTodoUsecase(todoRepo repository.TodoRepository) TodoUsecase {
@@ -20,5 +25,10 @@ func NewTodoUsecase(todoRepo repository.TodoRepository) TodoUsecase {
 
 func (usecase *todoUsecase) View() (todos []*model.Todo, err error) {
 	todos, err = usecase.todoRepo.FindAll()
+	return
+}
+
+func (usecase *todoUsecase) Find(id int) (todo *model.Todo, err error) {
+	todo, err = usecase.todoRepo.FindById(id)
 	return
 }

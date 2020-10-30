@@ -30,3 +30,16 @@ func (todoRepo *TodoRepository) FindAll() (todos []*model.Todo, err error) {
 	}
 	return
 }
+
+func (todoRepo *TodoRepository) FindById(id int) (todo *model.Todo, err error) {
+	row, err := todoRepo.SqlHandler.Conn.Query("SELECT * FROM todo WHERE id = ?", id)
+	defer row.Close()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	row.Scan(&todo.ID, &todo.Task, &todo.LimitDate, &todo.Status)
+
+	return
+}
