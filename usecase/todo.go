@@ -14,10 +14,6 @@ type todoUsecase struct {
 	todoRepo repository.TodoRepository
 }
 
-func (usecase *todoUsecase) Id(id int) (todo *model.Todo, err error) {
-	panic("implement me")
-}
-
 func NewTodoUsecase(todoRepo repository.TodoRepository) TodoUsecase {
 	todoUsecase := todoUsecase{todoRepo: todoRepo}
 	return &todoUsecase
